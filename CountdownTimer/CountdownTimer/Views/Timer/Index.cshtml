@@ -1,0 +1,121 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Countdown Timer</h2>
+
+<div class="countDownTimer">
+
+    <div class="enterTimeSection">
+        <div>
+            <input type="number" class="timeField" data-bind="value: hoursEntered" />
+            <label class="timeLabel">hh</label>
+            <input type="number" class="timeField" data-bind="value: minutesEntered" />
+            <label class="timeLabel">mm</label>
+            <input type="number" class="timeField" data-bind="value: secondsEntered" />
+            <label class="timeLabel">ss</label>
+            <button id="startTimer" data-bind="click: startTimer, attr: { disabled: isInValidStartTime }">Start Timer</button>
+        </div>
+
+    </div>
+
+    <div class="dateTimer">
+        <div class="hoursDiv">
+            <div class="tens">
+                <div class="upperTensClock" data-bind="css: {
+            zero: tensHour() == 0, one: tensHour() == 1, two: tensHour() == 2, 
+            three: tensHour() == 3, four: tensHour() == 4,
+            five: tensHour() == 5, six: tensHour() == 6, seven: tensHour() == 7, 
+            eight: tensHour() == 8, nine: tensHour() == 9  }">
+                </div>
+
+                <div class="lowerTensClock" data-bind="css: {
+            lowerZero: tensHour() == 0, lowerOne: tensHour() == 1, lowerTwo: tensHour() == 2, 
+            lowerThree: tensHour() == 3, lowerFour: tensHour() == 4,
+            lowerFive: tensHour() == 5, lowerSix: tensHour() == 6, lowerSeven: tensHour() == 7,
+            lowerEight: tensHour() == 8, lowerNine: tensHour() == 9 }">
+                </div>
+
+            </div>
+
+            <div class="units">
+                <div class="upperClock" data-bind="css: {
+            zero: unitsHour() == 0, one: unitsHour() == 1, two: unitsHour() == 2, 
+            three: unitsHour() == 3, four: unitsHour() == 4,
+            five: unitsHour() == 5, six: unitsHour() == 6, seven: unitsHour() == 7,
+            eight: unitsHour() == 8, nine: unitsHour() == 9 }">
+                </div>
+
+                <div class="lowerClock" data-bind="css: {
+            lowerZero: unitsHour() == 0, lowerOne: unitsHour() == 1, lowerTwo: unitsHour() == 2, 
+            lowerThree: unitsHour() == 3, lowerFour: unitsHour() == 4,
+            lowerFive: unitsHour() == 5, lowerSix: unitsHour() == 6, lowerSeven: unitsHour() == 7,
+            lowerEight: unitsHour() == 8, lowerNine: unitsHour() == 9 }">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="minutesDiv">
+            <div class="tens">
+                <div class="upperTensClock" data-bind="css: {
+            zero: tensMin() == 0, one: tensMin() == 1, two: tensMin() == 2, three: tensMin() == 3, four: tensMin() == 4,
+            five: tensMin() == 5, six: tensMin() == 6, seven: tensMin() == 7, eight: tensMin() == 8, nine: tensMin() == 9  }">
+                </div>
+
+                <div class="lowerTensClock" data-bind="css: {
+            lowerZero: tensMin() == 0, lowerOne: tensMin() == 1, lowerTwo: tensMin() == 2, lowerThree: tensMin() == 3, lowerFour: tensMin() == 4,
+            lowerFive: tensMin() == 5, lowerSix: tensMin() == 6, lowerSeven: tensMin() == 7, lowerEight: tensMin() == 8, lowerNine: tensMin() == 9 }">
+                </div>
+
+            </div>
+
+            <div class="units">
+                <div class="upperClock" data-bind="css: {
+            zero: unitsMin() == 0, one: unitsMin() == 1, two: unitsMin() == 2, three: unitsMin() == 3, four: unitsMin() == 4,
+            five: unitsMin() == 5, six: unitsMin() == 6, seven: unitsMin() == 7, eight: unitsMin() == 8, nine: unitsMin() == 9 }">
+                </div>
+
+                <div class="lowerClock" data-bind="css: {
+            lowerZero: unitsMin() == 0, lowerOne: unitsMin() == 1, lowerTwo: unitsMin() == 2, lowerThree: unitsMin() == 3, lowerFour: unitsMin() == 4,
+            lowerFive: unitsMin() == 5, lowerSix: unitsMin() == 6, lowerSeven: unitsMin() == 7, lowerEight: unitsMin() == 8, lowerNine: unitsMin() == 9 }">
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="secondsDiv">
+            <div class="tens">
+                <div class="upperTensClock" data-bind="css: {
+            zero: tensSec() == 0, one: tensSec() == 1, two: tensSec() == 2, three: tensSec() == 3, four: tensSec() == 4,
+            five: tensSec() == 5, six: tensSec() == 6, seven: tensSec() == 7, eight: tensSec() == 8, nine: tensSec() == 9  }">
+                </div>
+
+                <div class="lowerTensClock" data-bind="css: {
+            lowerZero: tensSec() == 0, lowerOne: tensSec() == 1, lowerTwo: tensSec() == 2, lowerThree: tensSec() == 3, lowerFour: tensSec() == 4,
+            lowerFive: tensSec() == 5, lowerSix: tensSec() == 6, lowerSeven: tensSec() == 7, lowerEight: tensSec() == 8, lowerNine: tensSec() == 9 }">
+                </div>
+
+            </div>
+
+            <div class="units">
+                <div class="upperClock" data-bind="css: {
+            zero: unitsSec() == 0, one: unitsSec() == 1, two: unitsSec() == 2, three: unitsSec() == 3, four: unitsSec() == 4,
+            five: unitsSec() == 5, six: unitsSec() == 6, seven: unitsSec() == 7, eight: unitsSec() == 8, nine: unitsSec() == 9 }">
+                </div>
+
+                <div class="lowerClock" data-bind="css: {
+            lowerZero: unitsSec() == 0, lowerOne: unitsSec() == 1, lowerTwo: unitsSec() == 2, lowerThree: unitsSec() == 3, lowerFour: unitsSec() == 4,
+            lowerFive: unitsSec() == 5, lowerSix: unitsSec() == 6, lowerSeven: unitsSec() == 7, lowerEight: unitsSec() == 8, lowerNine: unitsSec() == 9 }">
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<a href="http://jsfiddle.net/ksVWz/3/">link to jsFiddle</a>

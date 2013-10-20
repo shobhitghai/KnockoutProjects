@@ -1,0 +1,103 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="headerTitle" >Flight information window using KnockoutJs</h2>
+                        
+                        
+<div id="ticketSection">
+
+    <div id="windowContainer">
+         
+        <div class="section" id="tripSelectionSection">
+            <input type="radio" name="tripType" value="oneWay" id="oneWayRadio" data-bind="checked: tripTypeSelected" />
+            <span>One way</span>
+
+            <input type="radio" name="tripType" value="roundTrip" id="roundTripRadio" data-bind="checked: tripTypeSelected" />
+            <span>Round trip</span>
+            <label class="sideLabel" data-bind="css: { roundTripDiscountLabel: tripTypeSelected() != 'roundTrip'}">
+                upto 20% off for round trip
+            </label>
+        </div>
+
+
+        <div class="section" id="citySection">
+            <span class="row-field">Leaving from</span>
+            <select class="citySelection" data-bind="options: fromCityDataSource,
+            optionsCaption: '--select--',
+            optionsText: 'name',
+            value: selectedFromCity">
+            </select>
+
+            <span class="row-field">Going to</span>
+            <select class="citySelection" data-bind="options: destinationDataSource,
+            optionsCaption: '--select--',
+            optionsText: 'name'">
+            </select>
+        </div>
+
+        <div class="section" id="dateSection">
+            <span class="row-field">Departure</span>
+            <input type="text" id="fromDatePcker" data-bind="datepicker: startDate, 
+            datepickerOptions: { minDate: 0, maxDate: '4M', dateFormat: 'dd/mm/yy' }" />
+
+            <span class="row-field">Return</span>
+            <input type="text" id="destinationDatePcker" data-bind="datepicker: returnDate, 
+            datepickerOptions: { minDate: 0, maxDate: '4M', dateFormat: 'dd/mm/yy'},
+            attr: {disabled: tripTypeSelected() != 'roundTrip'},            
+            minDate: startDate, minDateOptions: returnDate " />
+        </div>
+
+        <div class="section" id="travellerSection">
+            <span class="row-field">No. of travellers</span>
+            <input type="text" id="travellerTextBox" data-bind="value: numberOfTravellers" />
+
+            <label class="sideLabel">avail group discount</label>
+            <input type="checkbox" id="groupDiscount" />
+        </div>
+
+        <div class="section" id="classSection">
+            <input type="radio" name="class" value="economy" id="economyRadio" data-bind="checked: flightClassSelected" />
+            <span>Economy</span>
+
+            <input type="radio" name="class" value="business" id="businessRadio" data-bind="checked: flightClassSelected" />
+            <span>Business class</span>
+            <label class="sideLabel" data-bind="visible: flightClassSelected() == 'business'">
+                free inflight meal and cab
+            </label>
+        </div>
+
+        <div class="section" id="buttonsSection" data-bind="visible: !progressBarIsVisible()">
+            <button id="searchButton" data-bind="click: searchFlights">Search flights</button>
+            <button id="resetButton" data-bind="click: formReset">Reset</button>
+        </div>
+
+        <div id="searchProgressBar" class="section ui-progressbar ui-widget ui-widget-content ui-corner-all ui-progressbar-indeterminate"
+            data-bind="visible: progressBarIsVisible">
+            <div class="ui-progressbar-value ui-widget-header ui-corner-left">
+                <div class="ui-progressbar-overlay">searching...</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="searchResultGrid" data-bind="visible: searchResultIsVisible">
+        <div>
+            <span>name</span>
+            <label data-bind="text: airlineName" />
+        </div>
+        <div>
+            <label data-bind="text: arrivalTime" />
+        </div>
+        <div>
+            <label data-bind="text: departureTime" />
+        </div>
+        <div>
+            <label data-bind="text: flightCode" />
+        </div>
+    </div>
+
+
+    <a href="http://jsfiddle.net/G96bp/">fiddle</a>
+</div>

@@ -1,0 +1,92 @@
+﻿body {
+}
+
+.ui-progressbar {
+    position: relative;
+}
+
+#searchProgressBar{    
+    width: 200px;
+    height: 20px;
+    margin-left: 90px;
+}
+
+.timerTest {
+    background-image: url("animated-overlay.gif");
+}
+
+.ui-progressbar-overlay {
+    background-image: url("animated-overlay.gif");   
+    height: 100%;
+    opacity: 0.25;
+    text-align: center;
+    font-weight: bold;
+    color: black ;
+}
+
+.headerTitle {
+    margin-left: 30px; 
+    text-decoration: underline;
+}
+
+#windowContainer {
+    width: 400px;
+    height: 250px;
+    margin-left: 50px;
+    border-style:solid;
+    border-width:2px;
+    border-color:black;
+}
+
+.section {
+    margin: 10px;
+}
+
+.row-field {
+    margin-left: 15px; 
+    margin-right: 5px
+}
+
+#oneWayRadio, #economyRadio {
+    margin-left: 12px;
+}
+
+#roundTripRadio, #businessRadio {
+    margin-left: 15px;
+}
+
+.sideLabel {
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.roundTripDiscountLabel {
+    text-decoration: line-through;
+}
+
+#fromDatePcker, #destinationDatePcker, .citySelection {
+    width: 90px;
+}
+
+#travellerTextBox {
+    width: 40px;
+}
+
+#groupDiscount {
+    vertical-align: middle;
+}
+
+#buttonsSection {
+    margin-top: 30px;
+}
+
+#searchButton {
+    margin-left: 80px;
+}
+
+#resetButton {
+    margin-left: 20px;
+}
+
+

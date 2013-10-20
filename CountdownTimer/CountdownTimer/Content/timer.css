@@ -1,0 +1,139 @@
+﻿/*timer css*/
+
+.dateTimer {
+    width: 500px;
+}
+
+.enterTimeSection {
+    margin-bottom: 30px;
+}
+
+.timerLine {
+    margin: 2px;
+    color: black;
+}
+
+.timeField {
+    width: 35px;
+}
+
+.timeLabel {
+    vertical-align: bottom;
+}
+
+#startTimer {
+    margin-left: 20px;
+}
+
+.upperClock, .lowerClock, .upperTensClock, .lowerTensClock {
+    width: 50px;
+    height: 50px;
+    border-color: black;    
+    border-radius:6px;
+}
+
+.minutesDiv, .secondsDiv, .hoursDiv {
+    display: inline-block;
+    width: auto;
+    margin-left: 30px;
+    vertical-align: middle;
+}
+
+
+.tens, .units {
+    display: inline-block;
+    width: auto;
+}
+
+.units {
+    margin-left: 12px;
+    float: right;
+}
+
+.lowerClock {
+    margin-top: -2px;
+}
+
+.lowerTensClock {
+    margin-top: -2px;
+}
+
+.zero {
+    border-left-width: 4px;
+    border-left-style: ridge;
+    border-top-width: 4px;
+    border-top-style: ridge;
+    border-right-width: 4px;
+    border-right-style: ridge;
+}
+
+.one {
+    border-right-width: 4px;
+    border-right-style: ridge;
+}
+
+
+.two, .three {
+    border-top-width: 4px;
+    border-top-style: ridge;
+    border-right-width: 4px;
+    border-right-style: ridge;
+    border-bottom-width: 4px;
+    border-bottom-style: ridge;
+}
+
+
+.five, .six {
+    border-left-width: 4px;
+    border-left-style: ridge;
+    border-top-width: 4px;
+    border-top-style: ridge;
+    border-bottom-width: 4px;
+    border-bottom-style: ridge;
+}
+
+.seven {
+    border-top-width: 4px;
+    border-top-style: ridge;
+    border-right-width: 4px;
+    border-right-style: ridge;
+}
+
+.eight, .nine {
+    border-left-width: 4px;
+    border-left-style: ridge;
+    border-top-width: 4px;
+    border-top-style: ridge;
+    border-right-width: 4px;
+    border-right-style: ridge;
+    border-bottom-width: 4px;
+    border-bottom-style: ridge;
+}
+
+.four, .lowerZero, .lowerSix, .lowerEight {
+    border-right-width: 4px;
+    border-right-style: ridge;
+    border-bottom-width: 4px;
+    border-bottom-style: ridge;
+    border-left-width: 4px;
+    border-left-style: ridge;
+}
+
+.lowerOne, .lowerFour, .lowerSeven, .lowerNine {
+    border-right-width: 4px;
+    border-right-style: ridge;
+}
+
+.lowerTwo {
+    border-bottom-width: 4px;
+    border-bottom-style: ridge;
+    border-left-width: 4px;
+    border-left-style: ridge;
+}
+
+.lowerThree, .lowerFive {
+    border-right-width: 4px;
+    border-right-style: ridge;
+    border-bottom-width: 4px;
+    border-bottom-style: ridge;
+}
