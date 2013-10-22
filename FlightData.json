@@ -1,0 +1,10 @@
+[
+	{
+		"AirlineName" : "Indigo",
+		"ArrivalTime" : "8 p.m.",
+		"DepartureTime" : "10 p.m.",
+		"Discount" : null,
+		"FlightCode" : "GE406",
+		"Price" : "Rs 5000"
+	}	
+]
